@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@layer base {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    nav li {
+        @apply p-2 rounded-[8px] transition-all duration-300 hover:bg-brand hover:p-2 hover:rounded-[8px] hover:text-white
+    }
+
+    button {
+        @apply transition-all duration-200 ease-in border-[1px] border-gray-300 py-3 px-6 font-bold tracking-wide bg-brand text-white rounded-[8px]
+    }
+
+    label {
+        @apply bg-gray-200 p-3 rounded-[12px] 
+    }
+
+    input[type="checkbox"] {
+        @apply appearance-none text-green-400 border bg-white border-gray-300 mr-2 w-[20px] h-[20px] hover:cursor-pointer rounded-2xl;
+    }
+
+    input[type="checkbox"]:checked {
+        @apply bg-green-400 ring-0 border-none;
+    }
+
+    input[type="checkbox"]:focus,
+    input[type="checkbox"]:checked:focus {
+    @apply ring-0 ring-offset-0 outline-none;
+    }
+
+}
+
+@layer components {
+    .card {
+        @apply p-5 border border-gray-200 shadow-[5px] flex flex-col space-y-2 rounded-[8px] transition-transform duration-200 ease-in hover:-translate-y-2;
+    }
+
+    i {
+        @apply text-3xl text-brand;
+    }
+
+    .icon-wrapper {
+        @apply p-2 bg-brand-light w-fit rounded-[8px]  mb-3;
+    }
+
+    .card h3 {
+        @apply text-[20px] text-ink font-semibold tracking-tight
+    }
+}
+
+
+
+@theme {
+    --color-brand: #4f46e5;
+    --color-brand-light: #e0e7ff;
+    --color-ink: #0f172a;
+    --color-brand-deeper: #4338ca;
+
+    --breakpoint-lg: 950px;
+    --breakpoint-small: 522px;
+}

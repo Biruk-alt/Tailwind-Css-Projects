@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script defer src="script.js"></script>
+    <!-- linking fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="./dist/output.css" rel="stylesheet" />
+    <title>Nimbus</title>
+</head>
+<body class="">
+    <!-- nav bar -->
+    <nav class="flex justify-between items-center p-3 pr-[9%] pl-[9%] bg-white border-b-[1px] border-gray-300 shadow-lg max-md:pr-[3.5%] max-md:pl-[3.5%]">
+        <h1 id="#" class="text-[1.5em] leading-snug font-extrabold text-brand">Nimbus</h1>
+        <ul class="list-none flex justify-center items-center space-x-6">
+            <li id="#">Features</li>
+            <li id="#">Pricing</li>
+            <li id="#">About</li>
+            <li id="#" class="bg-brand p-2 rounded-[8px] text-white hover:bg-brand-deeper">Sign-up</li>
+        </ul>
+    </nav>
+
+    <!-- hero section -->
+     <section class="flex space-x-5 justify-center min-h-screen p-[9%] bg-[#f8fafc] max-md:flex-col gap-16 max-md:p-[3.5%]  max-md:pt-[10%]">
+        <div class="max-md:w-full left flex flex-1 flex-col space-y-4">
+            <h1 class="text-6xl text-ink font-extrabold tracking-tight max-md:text-5xl ">Plan your day. Finish what matters.</h1>
+            <p class="max-md:w-[100%] text-[20px] text-gray max-w-[80%]">Nimbus keeps your tasks, notes and deadlines in one calm place, so you spend less time organizing and more time doing.</p>
+            <div class="button-wrapper flex justify-start items-center space-x-4 mt-3">
+                <button class="hover:bg-transparent hover:border-[1px] hover:border-gray-300 hover:text-ink">Get Started</button>
+                <button class="bg-transparent text-ink hover:bg-brand hover:text-white">Learn More</button>
+            </div>
+        </div>
+        <div class="max-md:w-full right flex-1 self-center justify-end items-center">
+            <div class="todo-container  bg-white p-7 rounded-2xl shadow-2xl w-full space-y-3">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-[20px] text-ink font-bold">Today</h2>
+                    <h3 class="text-[14px] text-gray">3 tasks</h3>
+                </div>
+                <div class="flex flex-col space-y-3 ">
+                    <label class=""><input type="checkbox">Workout</label>
+                    <label><input type="checkbox">Finish Project</label>
+                    <label><input type="checkbox">Walk Dog</label>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Features Pages -->
+      <section class="p-[3.5%] flex flex-col space-y-8 md:p-[9%] mb-[50px]">
+        <div class="section-title-wrapper flex flex-col space-y-3 justify-center items-center">
+            <h1 class="text-4xl text-ink font-bold text-center">Everything you need, nothing you don't</h1>
+            <p class="text-[18px]">Three simple tools that work together.</p>
+        </div>
+        <div class="grid gap-4 md:grid-cols-3 sm:grid-cols-2 sm:gap-4">
+            <div class="card">
+                <div class="icon-wrapper"><i class="fa-regular fa-square-check"></i></div>
+                <h3>Simple tasks</h3>
+                <p>Add a task in seconds, set a due date and check it off when it's done.</p>
+            </div>
+            <div class="card">
+                <div class="icon-wrapper"><i class="fa-regular fa-newspaper"></i></div>
+                <h3>Quick notes</h3>
+                <p>Capture ideas next to the tasks they belong to, so nothing gets lost.</p>
+            </div>
+            <div class="card sm:col-span-2 md:col-span-1">
+                <div class="icon-wrapper"><i class="fa-regular fa-clock"></i></div>
+                <h3>Gentle reminders</h3>
+                <p>Get a nudge before a deadline, not a flood of notifications.</p>
+            </div>
+        </div>
+      </section>
+
+      <!-- Sign Up page -->
+       <section class="p-7 pt-[15%] pb-[15%] md:pt-[5%] md:pb-[5%] bg-brand text-white flex justify-center items-center flex-col space-y-4">
+        <h1 class="text-2xl text-white font-bold text-center sm:text-4xl">Ready to get organized?</h1>
+        <p class="text-[14px] sm:text-[14px]">Join with your email. It's free to start.</p>
+        <form class="grid grid-cols-[1fr_auto] gap-2 ">
+            <input type="text" placeholder="you@example.com" class="rounded-[8px]"/>
+            <button class="rounded-[8px] bg-white text-brand">Sign up</button>
+        </form>
+       </section>
+
+       <!-- footer -->
+        <section class="bg-ink text-gray-500 flex flex-col justify-between space-y-2 items-start p-5 small:flex-row">
+            <h3>© 2026 Nimbus. All rights reserved.</h3>
+            <ul class="flex space-x-4">
+                <li>privacy</li>
+                <li>terms</li>
+                <li>contact</li>
+            </ul>
+        </section>
+    
+</body>
+</html>
