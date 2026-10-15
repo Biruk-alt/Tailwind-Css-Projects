@@ -19,6 +19,8 @@
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
@@ -194,6 +196,18 @@
   .relative {
     position: relative;
   }
+  .-top-0 {
+    top: 0px;
+  }
+  .-top-5 {
+    top: calc(var(--spacing) * -5);
+  }
+  .-top-10 {
+    top: calc(var(--spacing) * -10);
+  }
+  .-top-13 {
+    top: calc(var(--spacing) * -13);
+  }
   .top-0 {
     top: 0px;
   }
@@ -205,6 +219,15 @@
   }
   .top-5 {
     top: calc(var(--spacing) * 5);
+  }
+  .-right-0 {
+    right: 0px;
+  }
+  .-right-10 {
+    right: calc(var(--spacing) * -10);
+  }
+  .-right-13 {
+    right: calc(var(--spacing) * -13);
   }
   .right-0 {
     right: 0px;
@@ -236,14 +259,23 @@
   .left-\[0\] {
     left: 0;
   }
+  .-z-10 {
+    z-index: calc(10 * -1);
+  }
   .-z-20 {
     z-index: calc(20 * -1);
+  }
+  .z-10 {
+    z-index: 10;
   }
   .z-60 {
     z-index: 60;
   }
   .z-100 {
     z-index: 100;
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
   }
   .flex {
     display: flex;
@@ -257,9 +289,17 @@
   .table {
     display: table;
   }
+  .size-32 {
+    width: calc(var(--spacing) * 32);
+    height: calc(var(--spacing) * 32);
+  }
   .size-36 {
     width: calc(var(--spacing) * 36);
     height: calc(var(--spacing) * 36);
+  }
+  .size-37 {
+    width: calc(var(--spacing) * 37);
+    height: calc(var(--spacing) * 37);
   }
   .size-45 {
     width: calc(var(--spacing) * 45);
@@ -281,6 +321,12 @@
   }
   .flex-shrink {
     flex-shrink: 1;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .grow {
+    flex-grow: 1;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -328,6 +374,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -344,6 +393,9 @@
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -370,20 +422,14 @@
   .p-7 {
     padding: calc(var(--spacing) * 7);
   }
-  .p-13 {
-    padding: calc(var(--spacing) * 13);
-  }
-  .p-25 {
-    padding: calc(var(--spacing) * 25);
-  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
-  .py-5 {
-    padding-block: calc(var(--spacing) * 5);
+  .py-7 {
+    padding-block: calc(var(--spacing) * 7);
   }
   .font-jost {
     font-family: var(--font-jost);
@@ -475,8 +521,23 @@
     }
   }
   @media (width >= 588px) {
+    .md\:size-4 {
+      width: calc(var(--spacing) * 4);
+      height: calc(var(--spacing) * 4);
+    }
+    .md\:size-24 {
+      width: calc(var(--spacing) * 24);
+      height: calc(var(--spacing) * 24);
+    }
+    .md\:size-42 {
+      width: calc(var(--spacing) * 42);
+      height: calc(var(--spacing) * 42);
+    }
     .md\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .md\:py-13 {
+      padding-block: calc(var(--spacing) * 13);
     }
   }
   @media (width >= 800px) {
@@ -492,8 +553,31 @@
     .lg\:block {
       display: block;
     }
+    .lg\:flex {
+      display: flex;
+    }
     .lg\:hidden {
       display: none;
+    }
+    .lg\:size-8 {
+      width: calc(var(--spacing) * 8);
+      height: calc(var(--spacing) * 8);
+    }
+    .lg\:size-64 {
+      width: calc(var(--spacing) * 64);
+      height: calc(var(--spacing) * 64);
+    }
+    .lg\:size-80 {
+      width: calc(var(--spacing) * 80);
+      height: calc(var(--spacing) * 80);
+    }
+    .lg\:size-87 {
+      width: calc(var(--spacing) * 87);
+      height: calc(var(--spacing) * 87);
+    }
+    .lg\:size-90 {
+      width: calc(var(--spacing) * 90);
+      height: calc(var(--spacing) * 90);
     }
     .lg\:size-130 {
       width: calc(var(--spacing) * 130);
@@ -505,11 +589,29 @@
     .lg\:w-1\/2 {
       width: calc(1 / 2 * 100%);
     }
+    .lg\:w-1\/3 {
+      width: calc(1 / 3 * 100%);
+    }
+    .lg\:w-2\/2 {
+      width: calc(2 / 2 * 100%);
+    }
+    .lg\:w-2\/3 {
+      width: calc(2 / 3 * 100%);
+    }
     .lg\:w-fit {
       width: fit-content;
     }
     .lg\:w-full {
       width: 100%;
+    }
+    .lg\:max-w-\[3\] {
+      max-width: 3;
+    }
+    .lg\:max-w-\[327\] {
+      max-width: 327;
+    }
+    .lg\:max-w-\[327px\] {
+      max-width: 327px;
     }
     .lg\:flex-1 {
       flex: 1;
@@ -526,11 +628,23 @@
     .lg\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
+    .lg\:flex-col-reverse {
+      flex-direction: column-reverse;
+    }
     .lg\:flex-row {
       flex-direction: row;
     }
+    .lg\:flex-row-reverse {
+      flex-direction: row-reverse;
+    }
     .lg\:items-center {
       align-items: center;
+    }
+    .lg\:items-end {
+      align-items: flex-end;
+    }
+    .lg\:items-start {
+      align-items: flex-start;
     }
     .lg\:justify-between {
       justify-content: space-between;
@@ -538,8 +652,17 @@
     .lg\:justify-center {
       justify-content: center;
     }
+    .lg\:justify-end {
+      justify-content: flex-end;
+    }
     .lg\:gap-5 {
       gap: calc(var(--spacing) * 5);
+    }
+    .lg\:gap-9 {
+      gap: calc(var(--spacing) * 9);
+    }
+    .lg\:gap-17 {
+      gap: calc(var(--spacing) * 17);
     }
     :where(.lg\:space-x-8 > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -692,6 +815,21 @@
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
     }
+  }
+  .title {
+    font-family: var(--font-lobster);
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    color: var(--color-yellow-500);
+    @media (width >= 588px) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+  }
+  h3 {
+    font-size: 20px;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
 }
 @layer base {
