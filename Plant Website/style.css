@@ -50,8 +50,21 @@
         @apply text-2xl text-yellow-500 font-lobster md:text-3xl;
     }
 
-    h3 {
+    #about h3 {
         @apply font-bold text-[20px] 
+    }
+
+    .popular-card:hover  img  {
+        @apply -top-20!;
+    }   
+
+    .swiper-pagination-bullet {
+        @apply bg-green-500!
+    }
+
+    .footer-social-links i {
+        @apply hover:text-yellow-500 transition-colors duration-300
+
     }
 }
 
