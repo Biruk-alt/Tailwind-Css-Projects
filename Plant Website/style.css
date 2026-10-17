@@ -64,7 +64,10 @@
 
     .footer-social-links i {
         @apply hover:text-yellow-500 transition-colors duration-300
+    } 
 
+    .last h4 {
+        @apply text-green-950 text-[16px] font-bold
     }
 }
 

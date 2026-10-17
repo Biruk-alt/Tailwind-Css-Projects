@@ -17,7 +17,6 @@
     --color-green-900: oklch(39.3% 0.095 152.535);
     --color-green-950: oklch(26.6% 0.065 152.934);
     --color-slate-300: oklch(86.9% 0.022 252.894);
-    --color-slate-500: oklch(55.4% 0.046 257.417);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -33,6 +32,8 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+    --text-7xl: 4.5rem;
+    --text-7xl--line-height: 1;
     --font-weight-light: 300;
     --font-weight-bold: 700;
     --tracking-wide: 0.025em;
@@ -267,6 +268,9 @@
   .-z-20 {
     z-index: calc(20 * -1);
   }
+  .z-20 {
+    z-index: 20;
+  }
   .z-60 {
     z-index: 60;
   }
@@ -293,12 +297,6 @@
     @media (width >= 96rem) {
       max-width: 96rem;
     }
-  }
-  .mt-3 {
-    margin-top: calc(var(--spacing) * 3);
-  }
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
   }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
@@ -419,6 +417,9 @@
   .flex-row {
     flex-direction: row;
   }
+  .place-items-center {
+    place-items: center;
+  }
   .items-center {
     align-items: center;
   }
@@ -449,10 +450,20 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  :where(.space-y-2 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+  }
   :where(.space-y-3 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-4 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
   }
   :where(.space-y-5 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
@@ -474,6 +485,9 @@
     margin-inline-start: calc(calc(var(--spacing) * 5) * var(--tw-space-x-reverse));
     margin-inline-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-x-reverse)));
   }
+  .self-center {
+    align-self: center;
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -487,16 +501,12 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
   }
-  .border-\[1px\] {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .border-green-900 {
-    border-color: var(--color-green-900);
+  .border-green-500 {
+    border-color: var(--color-green-500);
   }
   .bg-green-700 {
     background-color: var(--color-green-700);
@@ -555,6 +565,9 @@
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
+  .text-center {
+    text-align: center;
+  }
   .font-jost {
     font-family: var(--font-jost);
   }
@@ -564,6 +577,10 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-7xl {
+    font-size: var(--text-7xl);
+    line-height: var(--tw-leading, var(--text-7xl--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -594,14 +611,14 @@
   .text-gray-300 {
     color: var(--color-gray-300);
   }
+  .text-green-700 {
+    color: var(--color-green-700);
+  }
   .text-green-900 {
     color: var(--color-green-900);
   }
   .text-slate-300 {
     color: var(--color-slate-300);
-  }
-  .text-slate-500 {
-    color: var(--color-slate-500);
   }
   .text-white {
     color: var(--color-white);
@@ -1018,6 +1035,12 @@
         color: var(--color-yellow-500);
       }
     }
+  }
+  .last h4 {
+    font-size: 16px;
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-green-950);
   }
 }
 @layer base {
