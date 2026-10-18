@@ -109,5 +109,23 @@ navBarObserver.observe(navBar)
 
 // cards
 const reviewSectionObserver = new IntersectionObserver(function(entries) {
-  
-}, {})
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      const card = entry.target;
+
+      card.style.transitionDuration = "1300ms";
+      card.classList.remove("-translate-y-6", "opacity-0");
+
+      setTimeout(function() {
+        card.style.transitionDuration = "";
+        card.style.transitionDelay = "";
+      }, 1300)
+    
+    }
+  })
+}, {threshold: 0.4})
+
+cards.forEach((card, i) => {
+  card.style.transitionDelay = `${i * 150}ms`;
+  reviewSectionObserver.observe(card);
+})
