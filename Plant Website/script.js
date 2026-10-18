@@ -130,4 +130,3 @@ cards.forEach((card, i) => {
   reviewSectionObserver.observe(card);
 })
 
-alert(innerWidth + " x " + innerHeight)
