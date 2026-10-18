@@ -129,3 +129,5 @@ cards.forEach((card, i) => {
   card.style.transitionDelay = `${i * 150}ms`;
   reviewSectionObserver.observe(card);
 })
+
+alert(innerWidth + " x " + innerHeight)
